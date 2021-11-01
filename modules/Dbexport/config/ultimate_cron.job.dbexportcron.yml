@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - Dbexport
+title: 'Database export Cron Handler'
+id: Dbexport_cron_job1
+weight: 0
+module: Dbexport
+callback: Dbexport_cron
+scheduler:
+  id: simple
+  configuration:
+    rules:
+      - '* * * * *'
+launcher:
+  id: serial
+  configuration:
+    timeouts:
+      lock_timeout: 3600
+    launcher:
+      thread: 0
+logger:
+  id: database
+  configuration:
+    method: '3'
+    expire: 1209600
+    retain: 1000

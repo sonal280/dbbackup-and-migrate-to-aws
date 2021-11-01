@@ -1,0 +1,5 @@
+services:
+  Dbexport.manager:
+    class: \Drupal\Dbexport\DbexportManager
+    arguments: ['@database']
+ 

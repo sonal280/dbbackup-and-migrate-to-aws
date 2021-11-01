@@ -1,0 +1,12 @@
+<?php
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+/**
+ * The callback for the cron job.
+ */
+function Dbexport_cron() {
+
+    $url = new Url('Dbexport.Dbexport');
+    $response = new RedirectResponse($url->toString());
+    $response->send();   
+}

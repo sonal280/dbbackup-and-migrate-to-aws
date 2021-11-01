@@ -1,0 +1,7 @@
+name: 'Db Export'
+description: 'Backup the Drupal database and files or migrate them to AWS S3.'
+package: AWS S3
+type: module
+core_version_requirement: ^8.8.0 || ^9
+
+

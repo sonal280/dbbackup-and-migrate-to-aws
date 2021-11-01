@@ -1,0 +1,26 @@
+Dbexport.Dbexport:
+  path: '/Dbexport'
+  defaults:
+    _controller: '\Drupal\Dbexport\Controller\DbExport::display'
+    _title: 'Display'
+  requirements:
+    _permission: 'access content'
+
+DbForm.admin_settings:
+  path: '/admin/config/content/DbForm'
+  defaults:
+    _form: '\Drupal\Dbexport\Form\DbForm'
+    _title: 'Indegene DB Export'
+  requirements:
+    _permission: 'administer Dbexport settings'    
+    _role: 'administrator'
+
+DbUploadForm.admin_settings:
+  path: '/admin/config/content/uploadDB'
+  defaults:
+    _form: '\Drupal\Dbexport\Form\DbUploadForm'
+    _title: 'Indegene DB Export'
+  requirements:
+    _permission: 'administer Dbexport settings'    
+    _role: 'administrator'  
+
